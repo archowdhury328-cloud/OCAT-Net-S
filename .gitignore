@@ -8,7 +8,7 @@ htmlcov/
 .venv/
 .env
 # data / artifacts: never tracked (see docs/artifact_policy.md)
-data/
+/data/
 cache/
 runs/
 checkpoints/
