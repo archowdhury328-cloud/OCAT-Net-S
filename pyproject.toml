@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ocat-net-s"
+version = "0.1.0"
+description = "Documented reconstruction of OCAT-Net-S (compact TFSG network for oral-cancer image classification). Research software, not a medical device."
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = { text = "MIT" }
+dependencies = [
+  "numpy>=1.26,<2.3", "pandas>=2.1", "scipy>=1.11", "scikit-learn>=1.4", "pillow>=10",
+  "matplotlib>=3.8", "PyYAML>=6", "torch>=2.2", "torchvision>=0.17", "timm>=1.0", "fvcore>=0.1.5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-cov>=5", "ruff>=0.5"]
+clip = ["open_clip_torch>=2.24"]
+
+[project.scripts]
+ocat = "ocat_net_s.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.coverage.run]
+source = ["ocat_net_s"]
+omit = ["src/ocat_net_s/cli.py"]
+
+[tool.ruff]
+line-length = 120
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+ignore = ["B008", "E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["E702", "E501"]
+"src/ocat_net_s/cli.py" = ["E702"]

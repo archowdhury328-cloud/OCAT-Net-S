@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Please cite the original paper. This repository is an independent documented reconstruction."
+title: "OCAT-Net-S (documented reconstruction)"
+type: software
+authors:
+  - family-names: Chy
+    given-names: Md Asikur Rahman
+    affiliation: "Department of Business Administration, International American University, Los Angeles, CA, USA"
+preferred-citation:
+  type: article
+  title: "A compact texture frequency spatial gating network for oral cancer classification from clinical oral images"
+  authors:
+    - {family-names: Rijvi, given-names: Mahmudul Haque}
+    - {family-names: Momotaj, given-names: Preety Arifa}
+    - {family-names: Uddin, given-names: Syed Mohammed Muhive}
+    - {family-names: Saha, given-names: Udoy Sankar}
+    - {family-names: Hossain, given-names: Sazzat}
+    - {family-names: Chy, given-names: Md Asikur Rahman}
+    - {family-names: Manik, given-names: Mia Md Tofayel Gonee}
+    - {family-names: Basit, given-names: Abdul}
+  journal: "Scientific Reports"
+  volume: 16
+  issue: 31071
+  year: 2026
+  doi: "10.1038/s41598-026-59480-0"

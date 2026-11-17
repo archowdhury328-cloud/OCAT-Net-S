@@ -1,0 +1,17 @@
+# Paper Tables 4-5 defaults (see docs/assumptions_and_deviations.md for unspecified items)
+train:
+  epochs: 200
+  batch_size: 32
+  warmup_epochs: 10
+  min_lr: 1.0e-6
+  weight_decay: 0.05
+  clip_norm: 1.0
+  smoothing: 0.10
+  loss: focal
+  focal_gamma: 2.0
+  class_weights: [0.40, 0.60]
+  mix: true
+  ema: true
+  ema_decay: 0.9998
+  select: ema_val_auc
+  seed: 42
