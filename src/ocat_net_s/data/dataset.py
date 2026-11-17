@@ -17,7 +17,9 @@ def load_rgb(path) -> Image.Image:
 
 
 class ImageDataset(Dataset):
-    def __init__(self, df: pd.DataFrame, root: str, transform, corruption: tuple[str, str] | None = None, normalize=None):
+    def __init__(
+        self, df: pd.DataFrame, root: str, transform, corruption: tuple[str, str] | None = None, normalize=None
+    ):
         self.df, self.root, self.transform = df.reset_index(drop=True), root, transform
         self.corruption, self.normalize = corruption, normalize
         self.geom = eval_geometry_transform() if corruption else None
